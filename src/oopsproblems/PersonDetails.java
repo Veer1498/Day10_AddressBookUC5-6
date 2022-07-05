@@ -11,44 +11,23 @@ public class PersonDetails {
 	private long phoneNo;
 	//static Scanner sc = new Scanner(System.in);
 
-	public PersonDetails(String firstName,String lastName, String address, String city, String state, int zipNo, long phoneNo ) {
-
-	//	System.out.println("Enter firstName");
-	//	firstName =sc.next();
-		this.firstName =firstName;
-		
-	//	System.out.println("Enter LastName");
-		//lastName =sc.next();
-		this.lastName =lastName;
-
-	//	System.out.println("Enter Address");
-		//address =sc.next();
-		this.address =address;
-		
-	//	System.out.println("Enter City");
-		//city =sc.next();
-		this.city =city;
-		
-	//	System.out.println("Enter State");
-		//state =sc.next();
-		this.state =state;
-
-	//	System.out.println("Enter Zip");
-		//zipNo =sc.nextInt();
-		this.zipNo =zipNo;
-
-	//	System.out.println("Enter phoneNumber");
-		//phoneNo =sc.nextLong();
-		this.phoneNo =phoneNo;
+	
+	
+	public PersonDetails(String firstName, String lastName, String address, String city, String state, int zipNo,
+			long phoneNo) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zipNo = zipNo;
+		this.phoneNo = phoneNo;
 	}
-	
-	
 	
 	public String getFirstName() {
 		return firstName;
 	}
-
-
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -128,16 +107,13 @@ public class PersonDetails {
 
 
 
-	public void show() {
-		// TODO Auto-generated method stub
-		System.out.println( "Person Details" );
-		System.out.println("FirstName = "+ this.firstName);
-		System.out.println("LastName = "+ this.lastName);
-		System.out.println("Address = "+ this.address);
-		System.out.println("city = "+ this.city);
-		System.out.println("state = "+ this.state);
-		System.out.println("zip = " +this.zipNo);
-		System.out.println("phoneNumber = " + this.phoneNo);
+	@Override
+	public String toString() {
+		return "PersonDetails [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", zipNo=" + zipNo + ", phoneNo=" + phoneNo + "]";
 	}
 
+
+
+	
 }
