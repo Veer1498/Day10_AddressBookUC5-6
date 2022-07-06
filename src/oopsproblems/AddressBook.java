@@ -12,13 +12,14 @@ public class AddressBook {
 		
 			AddressBook addressList = new AddressBook();
 			System.out.println("");
-			
+			System.out.println("Please Enter how mnay Contacts You want");
 					addressList.addContact();
 					addressList.editContact();
-					addressList.deleteContact();
-					
+					addressList.deleteContact();	
 		}
 		public void addContact(){
+			int max = sc.nextInt();
+			for (int i=0;i<=max;i++) {
 			PersonDetails person1 = new PersonDetails();
 				
 			System.out.println("Enter a first name:");
@@ -41,34 +42,9 @@ public class AddressBook {
 
 			System.out.println("Enter a phone number:");
 			person1.setPhoneNo(sc.nextLong());
-
-			addressBook.add(person1);
-			
 			System.out.println("===================================");
-			
-			System.out.println("Enter firstName");
-			String firstName =sc.next();
-			
-			System.out.println("Enter LastName");
-			String lastName =sc.next();
-
-			System.out.println("Enter Address");
-			String address =sc.next();
-			
-			System.out.println("Enter City");
-			String city =sc.next();
-			
-			System.out.println("Enter State");
-			String state =sc.next();
-
-			System.out.println("Enter Zip");
-			int zipNo =sc.nextInt();
-
-			System.out.println("Enter phoneNumber");
-			long phoneNo =sc.nextLong();
-			
-			PersonDetails person2 = new PersonDetails(firstName, lastName, address, city, state, zipNo, phoneNo);
-			addressBook.add(person2);
+			addressBook.add(person1);
+		}
 			System.out.print(addressBook);
 			System.out.println("successfully added person new contacts");
 			
@@ -80,7 +56,7 @@ public class AddressBook {
 			for (int i = 0; i < addressBook.size(); i++) {
 				if (addressBook.get(i).getFirstName().equals(editName)) {
 					System.out.println("select options");
-					System.out.println("\n0.First Name\n1.Last Name\n2.Address\n3.City\n4.State\n5.Zip\n6.Phone Number");
+					System.out.println("\n1.First Name\n2.Last Name\n3.Address\n4.City\n5.State\n6.Zip\n7.Phone Number");
 					int editOption = sc.nextInt();
 					// System.out.println("message"+editOption);
 					switch (editOption) {
