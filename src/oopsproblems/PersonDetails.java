@@ -25,6 +25,10 @@ public class PersonDetails {
 		this.phoneNo = phoneNo;
 	}
 	
+	public PersonDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
