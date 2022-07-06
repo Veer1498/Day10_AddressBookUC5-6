@@ -12,13 +12,17 @@ public class AddressBook {
 		
 			AddressBook addressList = new AddressBook();
 			System.out.println("");
-			System.out.println("Please Enter how mnay Contacts You want");
 					addressList.addContact();
 					addressList.editContact();
 					addressList.deleteContact();	
 		}
+		
+		//Add Contact Method
 		public void addContact(){
+			System.out.println("Add (Multiple) Contact");
+			System.out.println("Please Enter how mnay Contacts You want");
 			int max = sc.nextInt();
+			// For Multiple Contacts Enter How many You want 
 			for (int i=0;i<=max;i++) {
 			PersonDetails person1 = new PersonDetails();
 				
@@ -49,8 +53,9 @@ public class AddressBook {
 			System.out.println("successfully added person new contacts");
 			
 		}
-		
+		// Edit Contact Method
 		public void editContact() {
+			System.out.println("Edit Contact");
 			System.out.println("enter a name for edit:");
 			String editName = sc.next();
 			for (int i = 0; i < addressBook.size(); i++) {
@@ -98,7 +103,9 @@ public class AddressBook {
 				System.out.println(addressBook);
 			}
 		}	
+		// Delete Contact Method
 		public void deleteContact() {
+			System.out.println("Delete Contact");
 			System.out.println("confirm the name to delete contact");
 			String confirmName = sc.next();
 			for (int i = 0; i < addressBook.size(); i++) {
