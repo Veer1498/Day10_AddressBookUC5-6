@@ -17,6 +17,10 @@ public class Books {
 			book1.setBookName(sc.next());
 			System.out.println("===============");
 			BookList.add(book1);
+			AddressBook addressList = new AddressBook() ;
+			addressList.addContact();
+			addressList.editContact();
+			addressList.deleteContact();	
 		}
 
 	}

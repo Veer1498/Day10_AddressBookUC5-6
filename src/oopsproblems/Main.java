@@ -8,8 +8,7 @@ public class Main {
 		Books bookList = new Books();
 		System.out.println("");
 				bookList.NewBook();
-				//addressList.editContact();
-				//addressList.deleteContact();	
+			
 	}
 
 }
